@@ -1,9 +1,14 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: "./",
-    build: {
-        minify: "terser",
+  base: "/",
+  build: {
+    outDir: "dist",
+    minify: "terser",
+    rollupOptions: {
+      input: {
+        main: "index.html",
+      },
     },
-    
-})
+  },
+});
